@@ -1,0 +1,17 @@
+[package]
+name                    = "cc131x"
+version                 = "0.1.0"
+authors                 = ["Louis Thiery <louis@helium.com>"]
+
+[dependencies]
+spidev                  = "0.3.0"
+sysfs_gpio              = { version = "0.5", features = ["mio-evented"] }
+mio                     = "=0.6.15"
+crc                     = { version = "^1.0.0" }
+ihex                    = "~1.0.2"
+byteorder               = "1"
+enum-primitive-derive   = "^0.1"
+num-traits              = "=0.1.43"
+serde                   = "1.0"
+serde_derive            = "1.0"
+bincode                 = "1.0"
