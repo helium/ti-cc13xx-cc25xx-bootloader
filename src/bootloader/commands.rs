@@ -191,7 +191,7 @@ fn serializer(vec: &mut Vec<u8>, input: &CommandFields) -> Result<(), Error> {
             let mut vec_clone = v.clone();
             vec.append(&mut vec_clone);
         }
-        _ => assert!(false, "Status is never seralized"),
+        _ => panic!("Status is never seralized"),
     }
     Ok(())
 }

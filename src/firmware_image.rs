@@ -82,7 +82,7 @@ impl FirmwareImage {
                     }
                 }
                 Record::StartSegmentAddress { .. } => {}
-                _ => assert!(false, "Unhandled iHex record type!"),
+                _ => panic!("Unhandled iHex record type!"),
             }
         }
         segments.reverse();
