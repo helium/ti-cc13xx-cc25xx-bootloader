@@ -202,7 +202,6 @@ fn deserializer(
     count: usize,
 ) -> Result<(), Error> {
     use self::CommandFields::*;
-    use self::StatusValue;
 
     match *input {
         Sma(ref mut u) => *u = rdr.read_u8()?,
@@ -214,7 +213,7 @@ fn deserializer(
         }
         StatusValue(ref mut s) => {
             let status_byte = rdr.read_u8()?;
-            let status_value = StatusValue::from_u8(status_byte);
+            let status_value = self::StatusValue::from_u8(status_byte);
             match status_value {
                 Some(v) => *s = v,
                 None => return Err(Error::InvalidStatusCode),

@@ -1,5 +1,5 @@
 [package]
-name                    = "cc131x"
+name                    = "ti-rom-bootloader-cc13xx-cc25xx"
 version                 = "0.1.0"
 authors                 = ["Louis Thiery <louis@helium.com>"]
 
